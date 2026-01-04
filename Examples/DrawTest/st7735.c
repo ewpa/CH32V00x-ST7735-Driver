@@ -271,8 +271,8 @@ void tft_init(void)
     Delay_Ms(10);
 
     // Invert display
-    write_command_8(ST7735_INVON);
-    // write_command_8(ST7735_INVOFF);
+    // write_command_8(ST7735_INVON);
+    write_command_8(ST7735_INVOFF);
 
     // Normal display on, no args, w/delay
     write_command_8(ST7735_NORON);
