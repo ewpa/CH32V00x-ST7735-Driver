@@ -34,8 +34,8 @@
 
 #ifdef PLATFORMIO  // Use PlatformIO CH32V
     #include <debug.h>
-#else  // Use ch32v003fun
-    #include "ch32v003fun.h"
+#else  // Use ch32fun
+    #include "ch32fun.h"
 #endif
 
 #include "st7735.h"
@@ -62,7 +62,7 @@ int main(void)
 {
 #ifdef PLATFORMIO  // Use PlatformIO CH32V
     Delay_Init();
-#else  // Use ch32v003fun
+#else  // Use ch32fun
     SystemInit();
     Delay_Ms(100);
 #endif
