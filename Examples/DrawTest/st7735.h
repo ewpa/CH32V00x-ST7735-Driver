@@ -21,8 +21,8 @@
 // Define screen resolution and offset
 #define ST7735_WIDTH    160
 #define ST7735_HEIGHT   80
-#define ST7735_X_OFFSET 1
-#define ST7735_Y_OFFSET 26
+#define ST7735_X_OFFSET 0
+#define ST7735_Y_OFFSET 24
 
 // Note: To not use CS, uncomment the following line and pull CS to ground.
 //  #define ST7735_NO_CS
