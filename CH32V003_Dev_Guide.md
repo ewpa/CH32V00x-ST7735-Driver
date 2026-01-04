@@ -50,7 +50,7 @@ make
 
 #### Build `minichlink` Utility (macOS)
 
-The `minichlink` utility in the `tools` library is built for `x86_64`. If your macOS runs on Apple Silicon, you can build the `minichlink` utility easily.
+If your macOS runs on Apple Silicon, you can build the `minichlink` utility easily.
 
 ```shell
 brew install pkg-config

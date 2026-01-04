@@ -1,7 +1,6 @@
 PREFIX?=riscv64-unknown-elf
 
 CH32V003FUN?=./ch32v003fun
-MINICHLINK?=./tools
 
 CFLAGS+= \
 	-g -Os -flto -ffunction-sections \
@@ -43,10 +42,10 @@ endif
 terminal : monitor
 
 monitor :
-	$(MINICHLINK)/minichlink -T
+	minichlink -T
 
 gdbserver :
-	-$(MINICHLINK)/minichlink -baG
+	minichlink -baG
 
 clangd :
 	make clean
@@ -58,7 +57,7 @@ clangd_clean :
 	rm -f compile_commands.json .clangd
 	rm -rf .cache
 
-FLASH_COMMAND?=$(MINICHLINK)/minichlink -w $< $(WRITE_SECTION) -b
+FLASH_COMMAND?=minichlink -w $< $(WRITE_SECTION) -b
 
 cv_flash : $(TARGET).bin
 	# make -C $(MINICHLINK) all
